@@ -81,5 +81,11 @@ class Playlist:
   # 2. Song Title 2
   # 3. Song Title 3
 
+  # Created print_songs Method
   def print_songs(self):
-    pass
+    current_song = self.__first_song
+    index = 1
+    while current_song != None:
+      print(f"{str(index)}. {current_song}")
+      current_song = current_song.get_next_song()
+      index += 1
